@@ -1,0 +1,15 @@
+>>> import requests
+>>> import json
+
+>>> dados_frutas = requests.get('https://fruityvice.com/api/fruit/all')
+
+Conseguimos recuperar os resultados usando a função json.loads().
+Para isso, é necessário passar a variável dados_frutas, criada anteriormente 
+com o atributo text que retorna o conteúdo da resposta.
+
+>>> resultado = json.loads(dados_frutas.text)
+
+>>> pd.DataFrame(resultado)
+
+
+
